@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <link href="styles_restuarantes.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/core.css">
+    <title>Pide tu comida favorita online | Gourmet Race</title>
+    <meta name="description" content="Hambriento? Busca tus restaurantes favoritos">
+    <meta name="keywords" content="restaurantes,restaurants,restaurant,comida,food,hambre,precios,barato">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    function back() { window.history.go(-1); }
+</script>
+
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-dark" style="height: 70px;background-color: black;">
+        <a class="navbar-brand" style="cursor: not-allowed; margin-top: -90px;">
+            <img src="resources/user.png" width="30" height="30" alt="">
+            Iniciar sesión o registrarse
+        </a>
+
+        <img src="resources/gourmetRace2_small.png" class="d-inline-block align-top"
+            style="padding-top: 35px; padding-left: 150px; margin-top: -80px;" alt="" data-toggle="modal"
+            data-target="#exampleModal">
+
+        <form class="form-inline" style="margin-top: -90px;">
+            <a class="navbar-brand">¿Necesitas ayuda?</a>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." pattern="^[a-zA-Zñ0-9]*$"
+                aria-label="Search">
+            <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </nav>
+    <!-- //Navigation bar -->
+
+    <!-- Progress Bar -->
+    <div class="progress" style="border-radius: 0%; height: 30px;">
+        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+            style="width: 66%; border-radius: 0%;">PASO 2 Escoge el plato que más te apetezca</div>
+    </div>
+    <!-- //Progress Bar -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Va a abandonar el proceso de compra.
+                    ¿Esta de acuerdo?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <a href="https://marcosPlaza.github.io">
+                        <button type="button" class="btn btn-danger">Continuar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal -->
+
+    <!-- Main wrapper -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="container-fluid" style="background-color: rgba(255, 255, 255, 0.75)">
+                <h1>Carta de la pizzería "La Piccola"</h1>
+                <div class="row">
+                    <div class="col-sm-1">
+                        <img src="resources/5star.png" width="100%" height="100%" class="d-inline-block align-top"
+                            alt="">
+                    </div>
+                    <div class="col-sm-1">
+                        <div class="row" style="padding-top: 5px;">
+                            <img src="resources/euro.png" width="15%" height="15%" class="d-inline-block align-top"
+                                alt="">
+                            <img src="resources/euro.png" width="15%" height="15%" class="d-inline-block align-top"
+                                alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2">
+                <!-- Filters -->
+                <div class="container-fluid" style="padding-top: 90px;">
+                    <div class="row">
+                        <div class="col-sm-3" style="margin-right: 60px;">
+                            <h5 class="text" style="color: black; font-size: 32px;">Filtros</h5>
+                        </div>
+                        <div class="col-sm-2">
+                            <img src="resources/filters.png" width="25" height="30" style="padding-top: 5px;"
+                                class="d-inline-block align-top" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <button onclick="changeColor1();" id="btn_ofertas" type="button" class="btn btn-white"
+                                onpressed="" data-toggle="button" aria-pressed="false" autocomplete="off"
+                                style="width: 100%">Ofertas especiales</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding-top: 5px">
+                            <button onclick="changeColor2();" id="btn_gastos" type="button" class="btn btn-white"
+                                data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Gastos
+                                de entrega gratis</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding-top: 5px">
+                            <button onclick="changeColor3();" id="btn_carne" type="button" class="btn btn-white"
+                                data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Para
+                                carnívoros</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding-top: 5px">
+                            <button onclick="changeColor4();" id="btn_veg" type="button" class="btn btn-white"
+                                data-toggle="button" aria-pressed="false" autocomplete="off"
+                                style="width: 100%">Vegetarianos</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding-top: 5px">
+                            <button onclick="changeColor5();" id="btn_queso" type="button" class="btn btn-white"
+                                data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Amantes
+                                del queso</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col" style="padding-top: 5px">
+                            <button type="button" class="btn btn-warning" style="width: 100%;">
+                                Aplicar cambios
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Filters -->
+            </div>
+            <div class="col-sm-8">
+                <div style="width: 100%;">
+                    <div class="title">PIZZAS</div>
+                    <div class="container-fluid" style="padding-top: 50px; background-color: transparent;">
+                        <div class="row" style="background-color: rgba(255, 255, 255, 0.75);">
+                            <img src="resources/4quesos.jpg" width="250" height="150" style="border-radius: 2%;">
+                            <h5 style="padding-top: 10px; padding-left: 10px;">Pizza 4 quesos, 7.50€</h5>
+                            <p style="padding-left: 10px; padding-top: 10px;">Ingredientes: Harina, Aceite, Agua, Sal,
+                                Levadura, Tomate casero, Óregano, Mozzarella, Gorgonzola, Parmesano, Cheddar</p>
+                            </img>
+                            <button onclick="pizza4quesos();" type="button" class="btn btn-danger" style="width: 100%"
+                                style="border-radius: 0%">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 20px; background-color: transparent;">
+                        <div class="row" style="background-color: rgba(255, 255, 255, 0.75);">
+                            <img src="resources/pizzakebab.jpg" width="250" height="150" style="border-radius: 2%;">
+                            <h5 style=" padding-top: 10px; padding-left: 10px;">Pizza kebab, 6.00€</h5>
+                            <p style="padding-left: 10px; padding-top: 10px;">Ingredientes: Harina, Aceite, Agua, Sal,
+                                Levadura, Tomate casero, Óregano, Mozzarella, carne de pollo, Carne de ternera</p>
+                            </img>
+                            <button onclick="pizzakebab();" type="button" class="btn btn-danger" style="width: 100%"
+                                style="border-radius: 0%">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 20px; background-color: transparent;">
+                        <div class="row" style="background-color: rgba(255, 255, 255, 0.75);">
+                            <img src="resources/pepperoni.jpg" width="250" height="150" style="border-radius: 2%;">
+                            <h5 style=" padding-top: 10px; padding-left: 10px;">Pizza pepperoni, 7.50€</h5>
+                            <p style="padding-left: 10px; padding-top: 10px;">Ingredientes: Harina, Aceite, Agua, Sal,
+                                Levadura, Tomate casero, Óregano, Mozzarella, Pepperoni</p>
+                            </img>
+                            <button onclick="pizzapepperoni();" type="button" class="btn btn-danger" style="width: 100%"
+                                style="border-radius: 0%">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 20px; background-color: transparent;">
+                        <div class="row" style="background-color: rgba(255, 255, 255, 0.75);">
+                            <img src="resources/4quesos.jpg" width="250" height="150" style="border-radius: 2%;">
+                            <h5 style="padding-top: 10px; padding-left: 10px;">Pizza carbonara, 7.00€</h5>
+                            <p style="padding-left: 10px; padding-top: 10px;">Ingredientes: Harina, Aceite, Agua, Sal,
+                                Levadura, Salsa carbonara, Óregano, Mozzarella, Bacon</p>
+                            </img>
+                            <button onclick="pizzacarbonara();" type="button" class="btn btn-danger" style="width: 100%"
+                                style="border-radius: 0%">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    <div class="container-fluid" style="padding-top: 20px; background-color: transparent;">
+                        <div class="row" style="background-color: rgba(255, 255, 255, 0.75);">
+                            <img src="resources/4quesos.jpg" width="250" height="150" style="border-radius: 2%;">
+                            <h5 style=" padding-top: 10px; padding-left: 10px;">Pizza prosciutto, 9.50€</h5>
+                            <p style="padding-left: 10px; padding-top: 10px;">Ingredientes: Harina, Aceite, Agua, Sal,
+                                Levadura, Tomate casero, Óregano, Mozzarella, Jamon cocido</p>
+                            </img>
+                            <button onclick="pizzaprosciuto();" type="button" class="btn btn-danger" style="width: 100%"
+                                style="border-radius: 0%">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="title" style="margin-top: 60px;">PARA BEBER (TODO A 1.50€)</div>
+                    <div class="Flex">
+                        <img onclick="cocacola();" type="button" class="drink" src="resources/cocacola.jpg">
+                        <img onclick="cocacolalight();" type="button" class="drink" src="resources/cocacolalight.jpg">
+                        <img onclick="cocacolazero();" type="button" class="drink" src="resources/cocacolazero.jpg">
+                    </div>
+                    <div class="Flex" style="margin-top: -40px;">
+                        <img onclick="aquarius();" type="button" class="drink" src="resources/aquarius.jpg">
+                        <img onclick="fanta();" type="button" class="drink" src="resources/fanta.png">
+                        <img onclick="sprite();" type="button" class="drink" src="resources/sprite.png">
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div class="overflow-auto" style="width: 100%; min-height: 200px; max-height: 800px; margin-top: 90px;">
+                    <div class="container-fluid" style="padding-top: 90px;">
+                        <div class="row" style="padding-left: 15px;">
+                            <div class="col-sm-3" style="margin-top: -80px;">
+                                <h5 class="text" style="color: black; font-size: 32px;">Carrito</h5>
+                            </div>
+                            <div class="col-sm-2">
+                                <img src="resources/Carrito.png" width="15" height="20" style="padding-top: 5px;"
+                                    class="d-inline-block align-top" alt="">
+                            </div>
+
+                        </div>
+                        <div class="container-fluid" style="padding-left: -10px; margin-top: -70px;"
+                            id="containerFluid">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="text" style="color: black; margin-top: 30px; margin-left: 30px;" id="total">
+                            Total: <span id="money">0.00</span>€
+                        </label>
+                    </div>
+                </div>
+                <a href="pagar.html">
+                    <button type="button" class="btn btn-warning" style="width: 100%; margin-top: 30px;">
+                        Confirmar y pagar
+                    </button>
+                </a>
+            </div>
+        </div>
+        <!-- //Mainwrapper -->
+
+        <!-- Footer -->
+        <div class="bottom-block" style="background-color: black;">
+            <div class="flex-bottom">
+                <div class="mobile-block">
+                    <h1>Descárgate nuestra app en tu tienda favorita</h1>
+                    <img type="submit" src="resources/apple.svg" alt="Apple Store">
+                    <img type="submit" src="resources/google.png" alt="Google Play">
+                </div>
+                <div class="mobile-block">
+                    <h1>Formas de pago</h1>
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-cc-paypal fa-stack-1x"></i>
+                    </span>
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-cc-visa fa-stack-1x"></i>
+                    </span>
+
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-cc-mastercard fa-stack-1x"></i>
+                    </span>
+
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-cc-discover fa-stack-1x"></i>
+                    </span>
+                </div>
+                <div class="mobile-block">
+                    <h1>Síguenos en</h1>
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x"></i>
+                    </span>
+
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-instagram fa-stack-1x"></i>
+                    </span>
+
+                    <span style="color: white;" class="fa-stack fa-lg">
+                        <i class="fa fa-square-o fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="margin"></div>
+        </div>
+        <!-- //Footer -->
+
+        <!-- Javascript -->
+
+        <script>
+
+            var btn_ofertas = document.getElementById("btn_ofertas");
+            var btn_gastos = document.getElementById("btn_gastos");
+            var btn_carne = document.getElementById("btn_carne");
+            var btn_veg = document.getElementById("btn_veg");
+            var btn_queso = document.getElementById("btn_queso");
+
+            btn_ofertas.style.background = "white";
+            btn_gastos.style.background = "white";
+            btn_carne.style.background = "white";
+            btn_veg.style.background = "white";
+            btn_queso.style.background = "white";
+
+            option1 = 0;
+            option2 = 0;
+            option3 = 0;
+            option4 = 0;
+            option5 = 0;
+
+            function changeColor1() {
+                if (option1 == 0) {
+                    btn_ofertas.style.background = "#d63636";
+                    btn_ofertas.style.color = "white"
+                    option1 = 1;
+                } else {
+                    btn_ofertas.style.background = "white";
+                    btn_ofertas.style.color = "black"
+                    option1 = 0;
+                }
+            }
+
+
+            function changeColor2() {
+                if (option2 == 0) {
+                    btn_gastos.style.background = "#d63636";
+                    btn_gastos.style.color = "white"
+                    option2 = 1;
+                } else {
+                    btn_gastos.style.background = "white";
+                    btn_gastos.style.color = "black"
+                    option2 = 0;
+                }
+            }
+
+
+            function changeColor3() {
+                if (option3 == 0) {
+                    btn_carne.style.background = "#d63636";
+                    btn_carne.style.color = "white"
+                    option3 = 1;
+                } else {
+                    btn_carne.style.background = "white";
+                    btn_carne.style.color = "black"
+                    option3 = 0;
+                }
+            }
+
+
+            function changeColor4() {
+                if (option4 == 0) {
+                    btn_veg.style.background = "#d63636";
+                    btn_veg.style.color = "white"
+                    option4 = 1;
+                } else {
+                    btn_veg.style.background = "white";
+                    btn_veg.style.color = "black"
+                    option4 = 0;
+                }
+            }
+
+            function changeColor5() {
+                if (option5 == 0) {
+                    btn_queso.style.background = "#d63636";
+                    btn_queso.style.color = "white"
+                    option5 = 1;
+                } else {
+                    btn_queso.style.background = "white";
+                    btn_queso.style.color = "black"
+                    option5 = 0;
+                }
+            }
+
+        </script>
+
+        <script>
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function () { fixFilters() };
+
+            // Get the header
+            var filters = $("filters");
+
+            // Get the offset position of the navbar
+            var sticky = filters.offsetTop;
+
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function fixFilters() {
+                if (window.pageYOffset > sticky) {
+                    filters.classList.add("sticky");
+                } else {
+                    filters.classList.remove("sticky");
+                }
+            }
+        </script>
+
+        <script>
+
+            var container = document.getElementById("containerFluid");
+            var money = document.getElementById("money");
+
+            total = 0.00;
+            money.innerHTML = total + ".00";
+
+            function pizza4quesos() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', remove4quesos, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/pizzaIcon.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Cuatro quesos";
+                label.style.paddingLeft = "5px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+                total += 7.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function pizzakebab() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removekebab, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/pizzaIcon.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Pizza kebab";
+                label.style.paddingLeft = "5px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 6.00;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function pizzapepperoni() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removepepperoni, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/pizzaIcon.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Pizza pepperoni";
+                label.style.paddingLeft = "5px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 7.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function pizzacarbonara() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removecarbonara, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/pizzaIcon.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Pizza carbonara";
+                label.style.paddingLeft = "5px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 7.00;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function pizzaprosciuto() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removeprosciutto, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/pizzaIcon.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Pizza prosciuto";
+                label.style.paddingLeft = "5px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 9.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function cocacola() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Cocacola";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function cocacolalight() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Cocacola light";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function cocacolazero() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Cocacola zero";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function aquarius() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Aquarius";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function fanta() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Fanta";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function sprite() {
+                var div_row = document.createElement("DIV");
+                div_row.className = "row";
+                div_row.style.marginTop = "5px";
+                div_row.addEventListener('click', removebebida, false);
+
+                var div_col = document.createElement("DIV");
+                div_col.className = "col";
+
+
+                var btn = document.createElement("BUTTON");
+                btn.className = "btn btn-secondary";
+                btn.style.width = "100%";
+
+                var img = document.createElement("IMG");
+                img.src = "resources/bebida.png";
+                img.width = "20";
+                img.height = "30";
+                img.style.paddingTop = "5px";
+                img.style.paddingLeft = "-10px";
+                img.className = "d-inline-block align-top";
+                img.alt = "";
+
+                var label = document.createElement("LABEL");
+                label.innerHTML = "Sprite";
+                label.style.paddingLeft = "5px";
+                label.style.paddingTop = "10px";
+
+                btn.appendChild(img);
+                btn.appendChild(label);
+                div_col.appendChild(btn);
+                div_row.appendChild(div_col);
+                container.appendChild(div_row);
+
+
+                total += 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+
+            }
+
+            function esEntero(numero) {
+                if (numero % 1 == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            function remove4quesos(){
+                container.removeChild(this);
+
+                total -= 7.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function removekebab(){
+                container.removeChild(this);
+
+                total -= 6.00;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function removepepperoni(){
+                container.removeChild(this);
+
+                total -= 7.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function removecarbonara(){
+                container.removeChild(this);
+
+                total -= 7.00;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function removeprosciutto(){
+                container.removeChild(this);
+
+                total -= 9.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+            function removebebida(){
+                container.removeChild(this);
+
+                total -= 1.50;
+                if (esEntero(total)) {
+                    money.innerHTML = total + ".00";
+                } else {
+                    money.innerHTML = total + "0";
+                }
+            }
+
+        </script>
+
+
+</body>
+
+</html>

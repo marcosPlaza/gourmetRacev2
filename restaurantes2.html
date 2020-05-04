@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<!-- Font Awesome Icon Library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <link href="styles_restuarantes.css" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/core.css">
+    <title>Pide tu comida favorita online | Gourmet Race</title>
+    <meta name="description" content="Hambriento? Busca tus restaurantes favoritos">
+    <meta name="keywords" content="restaurantes,restaurants,restaurant,comida,food,hambre,precios,barato">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    function back() { window.history.go(-1); }
+</script>
+
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-dark" style="height: 70px;background-color: black;">
+        <a class="navbar-brand" style="cursor: not-allowed; margin-top: -90px;">
+            <img src="resources/user.png" width="30" height="30" alt="">
+            Iniciar sesión o registrarse
+        </a>
+
+        <img src="resources/gourmetRace2_small.png" class="d-inline-block align-top"
+            style="padding-top: 35px; padding-left: 150px; margin-top: -80px;" alt="" data-toggle="modal"
+            data-target="#exampleModal">
+
+        <form class="form-inline" style="margin-top: -90px;">
+            <a class="navbar-brand">¿Necesitas ayuda?</a>
+            <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." pattern="^[a-zA-Zñ0-9]*$"
+                aria-label="Search">
+            <button class="btn btn-danger my-2 my-sm-0" type="submit">Buscar</button>
+        </form>
+    </nav>
+    <!-- //Navigation bar -->
+
+    <!-- Progress Bar -->
+    <div class="progress" style="border-radius: 0%; height: 30px;">
+        <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
+            style="width: 33%; border-radius: 0%;">PASO 1 Escoge tu restaurante</div>
+    </div>
+    <!-- //Progress Bar -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Atención</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Va a abandonar el proceso de compra.
+                    ¿Esta de acuerdo?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <a href="https://marcosPlaza.github.io">
+                        <button type="button" class="btn btn-danger" onclick="window.history.go(-1);">Continuar</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal -->
+
+    <!-- Main wrapper -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- Carrito -->
+            <div class="container-fluid" style="padding-top: 20px; margin-left: 70px;">
+                <div class="row">
+                    <div class="col-sm-3" style="margin-right: -220px;">
+                        <h5>Carrito</h5>
+                    </div>
+                    <img src="resources/carrito.png" width="15" height="20" style="padding-top: 5px;"
+                        class="d-inline-block align-top" alt="">
+                    <a href="pagar.html">
+                        <button type="button" class="btn btn-warning"
+                            style="width: 160px; height: 40px; margin-top: 50px; margin-left: -90px;">
+                            Confirmar y pagar
+                        </button>
+                    </a>
+
+                </div>
+            </div>
+            <!-- FIN Carrito -->
+
+            <!-- Filters -->
+            <div class="container-fluid" style="padding-top: 40px;">
+                <div class="row">
+                    <div class="col-sm-3" style="margin-left: 80px; margin-right: -260px;">
+                        <h5>Filtros</h5>
+                    </div>
+                    <div class="col-sm-2">
+                        <img src="resources/filters.png" width="15" height="20" style="padding-top: 5px;"
+                            class="d-inline-block align-top" alt="">
+
+                        <button type="button" class="btn btn-warning"
+                            style="width: 100%; margin-left:860px; margin-top: -40px;">
+                            Aplicar cambios
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="margin-left: 80px; padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor1();" id="btn_ofertas" type="button" class="btn btn-white" onpressed=""
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Ofertas
+                        especiales</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor2();" id="btn_gastos" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Gastos de
+                        entrega gratis</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor3();" id="btn_val" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Mejores
+                        valorados</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor4();" id="btn_abiertos" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Abiertos
+                        ahora</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor5();" id="btn_recogida" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off"
+                        style="width: 100%">Recogida</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor6();" id="btn_nuevo" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Nuevo</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor7();" id="btn_halal" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Halal</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px; margin-right: 10px;">
+                    <button onclick="changeColor8();" id="btn_veg" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off"
+                        style="width: 100%">Vegetariano</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col" style="padding-top: 5px">
+                    <button onclick="changeColor9();" id="btn_vegano" type="button" class="btn btn-white"
+                        data-toggle="button" aria-pressed="false" autocomplete="off" style="width: 100%">Vegano</button>
+                </div>
+            </div>
+            <!-- //Filters -->
+
+            <div class="restaurant_block">
+
+                <div class="Flex">
+                    <div class="title2">Ofertas limitadas</div>
+                    <i onclick="leftButton();" style="margin-left: 810px;" class="arrow left" type="button"></i>
+                    <i onclick="rightButton();" class="arrow right" type="button"></i>
+
+                </div>
+
+                <div class="container-fluid">
+
+                    <ul class="Flex">
+
+                        <!--------------------------------------------BLOQUE 1------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/pizzeria1.jpg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">PIZZERIA NAPOLI</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>0.8 km, 15-20 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <!--------------------------------------------BLOQUE 2------------------------->
+
+                        <li class="notFlex">
+
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/tgb.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">TGB BURGUER</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>1.7 km, 30-40 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.0</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:80%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <!--------------------------------------------BLOQUE 3------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/kebab.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">KEBAB DONNER</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>1.3 km, 20-25 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">3.2</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:68%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="restaurant_block">
+
+                <div class="Flex">
+                    <div class="title2">Lo más pedido en tu zona</div>
+                    <i onclick="leftButton();" style="margin-left: 670px;" class="arrow left" type="button"></i>
+                    <i onclick="rightButton();" class="arrow right" type="button"></i>
+                </div>
+
+                <div class="contenedor">
+
+                    <ul class="Flex">
+
+                        <!--------------------------------------------BLOQUE 1------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/typical.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">TAPAS EMILIO</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>2.0 km, 30-40 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 2------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/chinese.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">RESTAURANTE DRAGON</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>1.8 km, 40-50 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">3.5</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:70%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 3------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/kebab1.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">KEBAB RAVAL</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>0.3 km, 10-15 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.0</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:80%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+            <div class="restaurant_block">
+
+                <div class="Flex">
+                    <div class="title2">Solo para ti</div>
+                    <i onclick="leftButton();" style="margin-left: 890px;" class="arrow left" type="button"></i>
+                    <i onclick="rightButton();" class="arrow right" type="button"></i>
+                </div>
+
+                <div class="contenedor">
+
+                    <ul class="Flex">
+
+                        <!--------------------------------------------BLOQUE 1------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/langosta.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">MESON ESTEBAN</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>2.3 km, 60 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.8</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:95%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 2------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/paella.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">RESTAURANTE FALLAS</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>1.3 km, 30-45 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 3------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/pulpo.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">O CANDIL</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>2.2 km, 20-30 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.4</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:91%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                    </ul>
+                    <ul class="Flex">
+
+                        <!--------------------------------------------BLOQUE 1------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/sushi.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">RESTAURANTE KIOTO</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>0.8 km, 15-20 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 2------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/autor.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">LA ARISTA</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>0.8 km, 15-20 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <!--------------------------------------------BLOQUE 3------------------------->
+
+                        <li class="notFlex">
+                            <div class="img_rest" type="button">
+                                <a href="ordering_food2.html">
+                                    <img class="Image-restaurant" src="resources/alemana.jpeg">
+                                </a>
+                            </div>
+
+                            <div class="restaurant-name">BAR MUNICH</div>
+
+                            <div class="text-description">
+                                <div class="Flex" style="margin-left: 120px;">
+                                    <i class="material-icons">room</i>
+                                    <p>0.8 km, 15-20 min</p>
+                                </div>
+                            </div>
+
+                            <div class="Flex">
+
+                                <div class="delete-margin">
+                                    <div class="valoration">4.3</div>
+                                </div>
+
+                                <div class="delete-margin">
+                                    <span class="score">
+                                        <div class="score-wrap">
+
+                                            <span class="stars-active" style="width:90%">
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                                <i class="fa fa-star" aria-hidden="true"></i>
+                                            </span>
+
+                                            <span class="stars-inactive">
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- //Mainwrapper -->
+
+    <!-- Footer -->
+    <div class="bottom-block" style="background-color: black;">
+        <div class="flex-bottom">
+            <div class="mobile-block">
+                <h1>Descárgate nuestra app en tu tienda favorita</h1>
+                <img type="submit" src="resources/apple.svg" alt="Apple Store">
+                <img type="submit" src="resources/google.png" alt="Google Play">
+            </div>
+            <div class="mobile-block">
+                <h1>Formas de pago</h1>
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-cc-paypal fa-stack-1x"></i>
+                </span>
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-cc-visa fa-stack-1x"></i>
+                </span>
+
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-cc-mastercard fa-stack-1x"></i>
+                </span>
+
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-cc-discover fa-stack-1x"></i>
+                </span>
+            </div>
+            <div class="mobile-block">
+                <h1>Síguenos en</h1>
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x"></i>
+                </span>
+
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-instagram fa-stack-1x"></i>
+                </span>
+
+                <span style="color: white;" class="fa-stack fa-lg">
+                    <i class="fa fa-square-o fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x"></i>
+                </span>
+            </div>
+        </div>
+        <div class="margin"></div>
+    </div>
+    <!-- //Footer -->
+
+    <!-- Javascript -->
+
+    <script>
+
+        var btn_ofertas = document.getElementById("btn_ofertas");
+        var btn_gastos = document.getElementById("btn_gastos");
+        var btn_val = document.getElementById("btn_val");
+        var btn_abiertos = document.getElementById("btn_abiertos");
+        var btn_recogida = document.getElementById("btn_recogida");
+        var btn_nuevo = document.getElementById("btn_nuevo");
+        var btn_halal = document.getElementById("btn_halal");
+        var btn_veg = document.getElementById("btn_veg");
+        var btn_vegano = document.getElementById("btn_vegano");
+
+        btn_ofertas.style.background = "white";
+        btn_gastos.style.background = "white";
+        btn_val.style.background = "white";
+        btn_abiertos.style.background = "white";
+        btn_recogida.style.background = "white";
+        btn_nuevo.style.background = "white";
+        btn_halal.style.background = "white";
+        btn_veg.style.background = "white";
+        btn_vegano.style.background = "white";
+
+        option1 = 0;
+        option2 = 0;
+        option3 = 0;
+        option4 = 0;
+        option5 = 0;
+        option6 = 0;
+        option7 = 0;
+        option8 = 0;
+        option9 = 0;
+
+        function changeColor1() {
+            if (option1 == 0) {
+                btn_ofertas.style.background = "#d63636";
+                btn_ofertas.style.color = "white"
+                option1 = 1;
+            } else {
+                btn_ofertas.style.background = "white";
+                btn_ofertas.style.color = "black"
+                option1 = 0;
+            }
+        }
+
+
+        function changeColor2() {
+            if (option2 == 0) {
+                btn_gastos.style.background = "#d63636";
+                btn_gastos.style.color = "white"
+                option2 = 1;
+            } else {
+                btn_gastos.style.background = "white";
+                btn_gastos.style.color = "black"
+                option2 = 0;
+            }
+        }
+
+
+        function changeColor3() {
+            if (option3 == 0) {
+                btn_val.style.background = "#d63636";
+                btn_val.style.color = "white"
+                option3 = 1;
+            } else {
+                btn_val.style.background = "white";
+                btn_val.style.color = "black"
+                option3 = 0;
+            }
+        }
+
+
+        function changeColor4() {
+            if (option4 == 0) {
+                btn_abiertos.style.background = "#d63636";
+                btn_abiertos.style.color = "white"
+                option4 = 1;
+            } else {
+                btn_abiertos.style.background = "white";
+                btn_abiertos.style.color = "black"
+                option4 = 0;
+            }
+        }
+
+        function changeColor5() {
+            if (option5 == 0) {
+                btn_recogida.style.background = "#d63636";
+                btn_recogida.style.color = "white"
+                option5 = 1;
+            } else {
+                btn_recogida.style.background = "white";
+                btn_recogida.style.color = "black"
+                option5 = 0;
+            }
+        }
+
+        function changeColor6() {
+            if (option6 == 0) {
+                btn_nuevo.style.background = "#d63636";
+                btn_nuevo.style.color = "white"
+                option6 = 1;
+            } else {
+                btn_nuevo.style.background = "white";
+                btn_nuevo.style.color = "black"
+                option6 = 0;
+            }
+        }
+
+        function changeColor7() {
+            if (option7 == 0) {
+                btn_halal.style.background = "#d63636";
+                btn_halal.style.color = "white"
+                option7 = 1;
+            } else {
+                btn_halal.style.background = "white";
+                btn_halal.style.color = "black"
+                option7 = 0;
+            }
+        }
+
+        function changeColor8() {
+            if (option8 == 0) {
+                btn_veg.style.background = "#d63636";
+                btn_veg.style.color = "white"
+                option8 = 1;
+            } else {
+                btn_veg.style.background = "white";
+                btn_veg.style.color = "black"
+                option8 = 0;
+            }
+        }
+
+
+        function changeColor9() {
+            if (option9 == 0) {
+                btn_vegano.style.background = "#d63636";
+                btn_vegano.style.color = "white"
+                option9 = 1;
+            } else {
+                btn_vegano.style.background = "white";
+                btn_vegano.style.color = "black"
+                option9 = 0;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
